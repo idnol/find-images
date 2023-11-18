@@ -13,6 +13,7 @@ export class SearchForm extends Component {
   handleFormSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit(this.state.formVal);
+    this.setState({formVal: ''})
   }
   render() {
     return <SearchFormStyled onSubmit={this.handleFormSubmit}>
